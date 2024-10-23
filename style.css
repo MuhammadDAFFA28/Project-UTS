@@ -1,0 +1,192 @@
+/* styles.css */
+
+/* Reset basic styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: darkgrey;
+    border-bottom: 2px solid white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.header-text h1, .header-text h2 {
+    margin: 35px;
+    color: black;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Navigation Styling */
+nav {
+    width: 20%;
+    background-color: darkgrey;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 5%;
+}
+
+nav ul li a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Main Section Styling */
+section {
+    flex: 1;
+    padding: 10px;
+    background-color: darkgrey;
+    box-sizing: border-box;
+}
+
+article {
+    display: none;
+}
+
+article.active {
+    display: block;
+}
+
+/* Aside Styling */
+aside {
+    width: 25%;
+    background-color: darkgrey;
+    padding: 30px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: darkgrey;
+    border-top: 2px solid white;
+    padding: 80px;
+    color: rgb(0, 0, 0);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-content .left {
+    text-align: left;
+}
+
+.footer-content .center {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.footer-content .right {
+    text-align: right;
+}
+
+.footer-content .right p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Smartphone: max-width 600px */
+@media only screen and (max-width: 768px) {
+    header, nav, section, aside, footer {
+        width: 100%; /* Semua elemen akan memiliki lebar penuh */
+    }
+    nav, aside {
+        text-align: center; /* Mengatur teks di nav dan aside menjadi center */
+    }
+    nav ul li {
+        margin-bottom: 10px; /* Spasi antar item menu di nav */
+    }
+    .container {
+        flex-direction: column; /* Menata layout dalam arah kolom */
+    }
+}
+
+/* Tablet portrait: max-width 768px */
+@media only screen and (max-width: 768px) {
+    header, nav, section, aside, footer {
+        width: 100%; /* Semua elemen akan memiliki lebar penuh */
+    }
+    nav, aside {
+        text-align: center; /* Mengatur teks di nav dan aside menjadi center */
+    }
+    nav ul li {
+        margin-bottom: 10px; /* Spasi antar item menu di nav */
+    }
+    .container {
+        flex-direction: column; /* Menata layout dalam arah kolom */
+    }
+}
+
+/* Tablet landscape: max-width 1024px */
+@media only screen and (max-width: 1024px) {
+    nav {
+        width: 30%;
+    }
+    aside {
+        width: 100%;
+    }
+}
+
+/* Desktop: min-width 1025px */
+@media only screen and (min-width: 1025px) {
+    nav {
+        width: 20%;
+    }
+    aside {
+        width: 25%;
+    }
+}
